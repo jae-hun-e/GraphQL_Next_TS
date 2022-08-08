@@ -2,7 +2,13 @@ import {NextPage} from "next";
 import client from "../../components/client"
 import {gql} from "@apollo/client";
 
-const Movie : NextPage = ({data}: any) => {
+interface IData {
+    title: string
+    id: number
+}
+
+// @ts-ignore
+const Movie : NextPage = ({data}: IData) => {
     {console.log(data)}
     return(
         <div className="bg-teal-300">
